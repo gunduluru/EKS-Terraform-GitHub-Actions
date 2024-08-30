@@ -17,11 +17,11 @@ pipeline {
                 sh 'echo Preparing'
             }
         }
-        stage('Git Pulling') {
-            steps {
-                git branch: 'master', url: 'https://github.com/gunduluru/EKS-Terraform-GitHub-Actions.git'
-            }
-        }
+        // stage('Git Pulling') {
+            // steps {
+                // git branch: 'master', url: 'https://github.com/gunduluru/EKS-Terraform-GitHub-Actions.git'
+            // }
+        // }
         stage('Init') {
             steps {
                 withAWS(credentials: 'aws-creds', region: 'us-east-1') {
